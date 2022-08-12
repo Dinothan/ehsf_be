@@ -38,6 +38,18 @@ const userSchema = new Schema({
   country: {
     type: String,
     required: true
+  },
+  weight: {
+    type: String,
+    required: true
+  },
+  height: {
+    type: String,
+    required: true
+  },
+  age: {
+    type: Number,
+    required: true
   }
 });
 

@@ -56,6 +56,9 @@ exports.postSignup = (req, res, next) => {
   const city = req.body.city;
   const state = req.body.state;
   const country = req.body.country;
+  const weight = req.body.weight;
+  const height = req.body.height;
+  const age = req.body.age;
   const id = req.body?._id;
 
   if (!id) {
@@ -76,7 +79,10 @@ exports.postSignup = (req, res, next) => {
               state: state,
               country: country,
               firstname: firstname,
-              lastname: lastname
+              lastname: lastname,
+              weight: weight,
+              height: height,
+              age: age
             });
             return user.save();
           })
